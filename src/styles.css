@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #122b3a;
+  --color-paper: #f6f5ef;
+  --color-sea: #156b76;
+}
+
+@layer base {
+  body {
+    @apply m-0 min-w-80 bg-paper font-sans text-ink antialiased;
+  }
+
+  button, a, input, select, textarea {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sea;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}

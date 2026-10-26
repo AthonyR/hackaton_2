@@ -1,5 +1,36 @@
 # Hackathon Frontend: One Piece — Rumbo al Grand Line
 
+## Ejecutar la base compartida
+
+Usar **Node 24 LTS** y abrir esta carpeta como raíz en IntelliJ (sin crear otro proyecto dentro).
+
+```powershell
+npm ci
+Copy-Item .env.example .env.local
+npm run dev
+```
+
+Abrir `http://localhost:5173`. Copiar el entorno solo la primera vez; si ya tienes `.env.local`,
+conserva tu configuración. En la copia donde se preparó esta base ya está creado.
+
+- `npm run build`: verifica TypeScript y genera `dist/`.
+- `npm run lint`: revisa el código y prohíbe `any` explícito.
+- `npm run typecheck`: verifica los tipos sin construir el bundle.
+- `npm run preview`: sirve el build local.
+- `npm run api:types`: regenera tipos desde el contrato público guardado.
+
+**Estado: base compartida y módulo A (CP1) implementados.** Registro, login, restauración
+de sesión, rutas protegidas, logout, dashboard y estado del Log Pose usan la API configurada.
+Los módulos B y C (CP2/CP4/CP5) conservan pantallas temporales y están pendientes.
+Detalles de A y verificaciones: [docs/MODULO_A.md](docs/MODULO_A.md).
+Reparto propuesto y acuerdos de integración: [docs/MODULOS.md](docs/MODULOS.md).
+Estado del equipo: [ESTADO_EQUIPO.md](ESTADO_EQUIPO.md).
+
+Integrantes (nombre y código) y TEAM_CODE: pendientes de completar con datos reales antes de entregar.
+No guardar contraseñas ni tokens en el repositorio.
+
+---
+
 > *"¡El One Piece existe!"* — Edward Newgate
 
 ## Descripción General
