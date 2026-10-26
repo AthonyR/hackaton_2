@@ -4,12 +4,13 @@
 - Raíz: esta carpeta (contiene `package.json`, `src/` y el README original).
 - Repositorio configurado: `https://github.com/AthonyR/hackaton_2.git`.
 - Rama local: `main`.
-- Referencia de `origin/main` confirmada por fetch al iniciar A: `535dab4e442506d6ce27aa42550221eb8eeccaa3`.
-  La referencia vigente de esta entrega se obtiene con `git log` y `git status`.
+- Último commit funcional publicado y verificado en `origin/main`:
+  `73f08b01d18f08071aa89888ef2a2e784299cbe9` (base + A).
+  El registro posterior de estado puede añadir un commit de documentación.
 - Encargo: implementar A y publicar base + A en `origin/main`, según autorización del usuario.
 - Reparto propuesto: A = CP1/base; B = CP2 y CP4; C = CP5. CP3 involucra a todos.
-- Base: preparada localmente; ver verificaciones al final de este archivo.
-- Parte A: implementada. Registro, login, sesión, guarda, logout, dashboard y Log Pose.
+- Base: incorporada a `main` y publicada en el repositorio del equipo.
+- Parte A: incorporada a `main` y publicada. Registro, login, sesión, guarda, logout, dashboard y Log Pose.
 - Parte B: pendiente. Rutas de carteles/noticias tienen pantallas temporales.
 - Parte C: pendiente. Rutas de sagas tienen pantallas temporales.
 - Documentación y contrato: README original, `docs/MODULOS.md`, `docs/MODULO_A.md`, `docs/openapi.json`.
