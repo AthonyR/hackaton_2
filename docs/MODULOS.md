@@ -1,7 +1,7 @@
 # Trabajo por módulos
 
-La base y A están publicados en `main`. B está implementado localmente y se entrega como ZIP
-para que su responsable lo incorpore. C sigue pendiente.
+La base, A y B están publicados en `main` (commit `76b8aea`). C está implementado localmente
+y se entrega como ZIP para que su responsable lo incorpore.
 El reparto siguiente es una propuesta por responsabilidades; no asigna nombres ni autorías.
 El README original conserva el enunciado y tiene prioridad sobre esta guía.
 
@@ -17,8 +17,8 @@ Los tres deben entender CP1 y CP2 y participar en la inspección presencial del 
 Solo el docente desbloquea Grand Line. Un error 423 debe mostrarse como bloqueo.
 
 Cada módulo incorpora sus páginas, componentes, hooks, servicios y estilos locales dentro
-de su carpeta. C sustituye los `ModulePlaceholder` en su propio `routes.tsx` sin cambiar sus
-exports. Los módulos se importan una sola vez desde `src/app/router.tsx`.
+de su carpeta. Los tres módulos ya tienen sus rutas funcionales; se conservan sus exports.
+Los módulos se importan una sola vez desde `src/app/router.tsx`.
 No importes archivos internos de otro módulo; usa `src/shared/` para los contratos comunes.
 
 ## Archivos compartidos
@@ -94,12 +94,12 @@ No añadas React Query, SWR ni librerías equivalentes.
 | Ruta | Módulo | Pendiente principal |
 | --- | --- | --- |
 | `/login`, `/register`, `/dashboard` | A | Implementado; pendiente prueba con la cuenta oficial del equipo |
-| `/wanted`, `/wanted/:id` | B | Implementado; pendiente incorporación del ZIP y prueba con cuenta oficial |
-| `/news`, `/news/:id` | B | Implementado; pendiente incorporación, prueba con cuenta oficial y desbloqueo CP3 |
-| `/sagas`, `/sagas/:id` | C | Historia desde API, etapa en URL, mapa, accesibilidad |
+| `/wanted`, `/wanted/:id` | B | Incorporado a main; pendiente prueba con cuenta oficial |
+| `/news`, `/news/:id` | B | Incorporado a main; pendiente prueba con cuenta oficial y desbloqueo CP3 |
+| `/sagas`, `/sagas/:id` | C | Implementado; pendiente incorporación del ZIP, cuenta oficial y desbloqueo CP3 |
 
 `/` redirige a `/dashboard`. Hay una página 404 y un fallback para errores de renderizado.
-Solo las páginas de C siguen siendo temporales. A y B consultan la API real configurada;
+Los tres módulos consultan la API real configurada;
 no hay fixtures ni un backend de prueba en el código entregable.
 No se ha registrado una tripulación ni probado acceso autenticado con la cuenta oficial.
 
@@ -116,8 +116,9 @@ No se ha registrado una tripulación ni probado acceso autenticado con la cuenta
 
 Antes de la entrega final completar `hackathon.json` con TEAM_CODE y los integrantes reales,
 y añadir sus nombres/códigos al README. No se generaron identidades ficticias ni credenciales.
-Base y A se publicaron en `origin/main`. B se entrega por ZIP y su responsable hace el commit/push.
-Ver `docs/INTEGRAR_B.md`. No preparar C sobre una copia anterior al push de B.
+Base, A y B están en `origin/main`. Se confirmó y recibió el push de B antes de preparar C.
+C se entrega por ZIP y su responsable hace el commit/push: ver `docs/INTEGRAR_C.md`.
+Después de su push, actualizar la copia principal antes de la revisión final del equipo.
 
 ## Referencias técnicas
 

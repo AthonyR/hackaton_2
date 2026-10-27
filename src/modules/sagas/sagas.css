@@ -1,0 +1,123 @@
+.saga-summary,
+.saga-experience {
+  background: var(--saga-background);
+  color: var(--saga-text);
+}
+
+.saga-summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  border-radius: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.saga-summary-order {
+  font-size: clamp(2.25rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--saga-primary);
+}
+
+.saga-eyebrow {
+  color: var(--saga-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.saga-button,
+.saga-back {
+  color: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.saga-button {
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  background: transparent;
+}
+
+.saga-button:hover:not(:disabled) { background: color-mix(in srgb, var(--saga-text) 12%, transparent); }
+.saga-button:disabled { cursor: default; opacity: 0.35; }
+.saga-back { text-decoration: underline; text-underline-offset: 0.25rem; }
+.saga-experience { border-radius: 1.25rem; padding: clamp(1rem, 3vw, 2.5rem); transition: background-color 350ms, color 350ms; }
+.saga-story-header { padding: 0.5rem 0.5rem 3rem; }
+.saga-layout { display: flex; flex-direction: column; gap: 1.5rem; align-items: stretch; }
+
+.saga-instrument-panel {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 20;
+  align-self: stretch;
+  padding: 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--saga-text) 24%, transparent);
+  border-radius: 1rem;
+  background: var(--saga-surface);
+  box-shadow: 0 8px 24px #0002;
+  transition: background-color 350ms;
+}
+
+.saga-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.saga-map { display: block; width: 100%; height: clamp(80px, 17svh, 150px); margin-top: 0.65rem; overflow: visible; }
+.saga-boat { transition: transform 550ms ease; }
+.saga-traveled-route { transition: stroke-dashoffset 550ms ease; }
+.saga-current-island { margin-top: 0.5rem; min-height: 1.5rem; font-size: 1rem; font-weight: 600; overflow-wrap: anywhere; }
+.saga-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 0.8rem; margin-top: 0.6rem; }
+.saga-metrics dt { font-size: 0.63rem; opacity: 0.75; overflow-wrap: anywhere; }
+.saga-metrics dd { margin-top: 0.1rem; font-size: 0.9rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.saga-metrics dd span { font-size: 0.65rem; opacity: 0.75; }
+.saga-progress-label { display: flex; justify-content: space-between; gap: 1rem; margin-top: 0.7rem; font-size: 0.65rem; opacity: 0.8; }
+.saga-progress-track { height: 0.25rem; overflow: hidden; margin-top: 0.35rem; border-radius: 999px; background: color-mix(in srgb, var(--saga-text) 18%, transparent); }
+.saga-progress-track > div { height: 100%; background: var(--saga-accent); transition: width 350ms ease; }
+.saga-stage-controls { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 0.4rem; margin-top: 0.8rem; }
+.saga-stage-controls .saga-button { padding: 0.5rem; font-size: 0.7rem; }
+.saga-stage-select { width: 100%; min-width: 0; border: 1px solid currentColor; border-radius: 0.5rem; padding: 0.5rem 0.3rem; background: var(--saga-background); color: var(--saga-text); font-size: 0.7rem; }
+.saga-narrative { min-width: 0; }
+.saga-stage { min-height: 80svh; padding: 3rem 0.5rem 4.5rem; border-top: 1px solid color-mix(in srgb, var(--saga-text) 24%, transparent); view-timeline-name: --saga-scene; view-timeline-axis: block; }
+.saga-stage-title { margin-top: 1rem; font-size: clamp(1.7rem, 3vw, 2.6rem); font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
+.saga-paragraphs { display: grid; gap: 1.3rem; margin-top: 2rem; font-size: 1rem; line-height: 1.9; }
+.saga-paragraphs p { white-space: pre-line; overflow-wrap: anywhere; }
+.saga-reading-track { height: 2px; margin-top: 1.5rem; overflow: hidden; background: color-mix(in srgb, var(--saga-text) 20%, transparent); }
+.saga-reading-fill { height: 100%; background: var(--saga-accent); transform: scaleX(var(--saga-reading, 0)); transform-origin: left; }
+.saga-story-footer { padding: 2rem 0.5rem 3rem; border-top: 1px solid color-mix(in srgb, var(--saga-text) 24%, transparent); }
+.saga-experience :focus-visible,
+.saga-summary :focus-visible { outline: 2px solid var(--saga-accent); outline-offset: 5px; }
+
+@supports (animation-timeline: view()) and (animation-range: contain 0% contain 100%) {
+  @media (prefers-reduced-motion: no-preference) {
+    .saga-reading-fill {
+      animation: saga-reading linear both;
+      animation-timeline: --saga-scene;
+      animation-range: contain 0% contain 100%;
+    }
+  }
+}
+
+@keyframes saga-reading { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (min-width: 420px) and (max-width: 959px) {
+  .saga-metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (min-width: 960px) {
+  .saga-layout { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 2.5rem; align-items: start; }
+  .saga-instrument-panel { align-self: start; padding: 1.2rem; }
+  .saga-map { height: clamp(150px, 28svh, 300px); margin-top: 1rem; }
+  .saga-current-island { font-size: 1.2rem; }
+  .saga-metrics { gap: 0.8rem; margin-top: 0.9rem; }
+  .saga-metrics dt { font-size: 0.7rem; }
+  .saga-metrics dd { font-size: 1.1rem; }
+  .saga-metrics dd span { font-size: 0.75rem; }
+  .saga-stage { padding-top: 3.5rem; min-height: 85svh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .saga-experience, .saga-experience *, .saga-summary, .saga-summary * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .saga-reading-track { display: none; }
+}
