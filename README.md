@@ -19,10 +19,12 @@ conserva tu configuración. En la copia donde se preparó esta base ya está cre
 - `npm run preview`: sirve el build local.
 - `npm run api:types`: regenera tipos desde el contrato público guardado.
 
-**Estado: base compartida y módulo A (CP1) implementados.** Registro, login, restauración
+**Estado: base compartida y módulos A/B (CP1, CP2 y CP4) implementados.** Registro, login, restauración
 de sesión, rutas protegidas, logout, dashboard y estado del Log Pose usan la API configurada.
-Los módulos B y C (CP2/CP4/CP5) conservan pantallas temporales y están pendientes.
+Carteles y noticias están implementados localmente en la entrega B; el integrante B debe incorporarla
+a `main`. Las noticias requieren el Log Pose del CP3. C (CP5) conserva sus pantallas temporales.
 Detalles de A y verificaciones: [docs/MODULO_A.md](docs/MODULO_A.md).
+Detalles de B: [docs/MODULO_B.md](docs/MODULO_B.md). Cómo incorporar el ZIP: [docs/INTEGRAR_B.md](docs/INTEGRAR_B.md).
 Reparto propuesto y acuerdos de integración: [docs/MODULOS.md](docs/MODULOS.md).
 Estado del equipo: [ESTADO_EQUIPO.md](ESTADO_EQUIPO.md).
 

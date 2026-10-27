@@ -1,6 +1,7 @@
 # Trabajo por módulos
 
-La base y el módulo A (CP1) están implementados. Los módulos B y C siguen pendientes.
+La base y A están publicados en `main`. B está implementado localmente y se entrega como ZIP
+para que su responsable lo incorpore. C sigue pendiente.
 El reparto siguiente es una propuesta por responsabilidades; no asigna nombres ni autorías.
 El README original conserva el enunciado y tiene prioridad sobre esta guía.
 
@@ -16,7 +17,7 @@ Los tres deben entender CP1 y CP2 y participar en la inspección presencial del 
 Solo el docente desbloquea Grand Line. Un error 423 debe mostrarse como bloqueo.
 
 Cada módulo incorpora sus páginas, componentes, hooks, servicios y estilos locales dentro
-de su carpeta. B y C sustituyen los `ModulePlaceholder` en su propio `routes.tsx` sin cambiar sus
+de su carpeta. C sustituye los `ModulePlaceholder` en su propio `routes.tsx` sin cambiar sus
 exports. Los módulos se importan una sola vez desde `src/app/router.tsx`.
 No importes archivos internos de otro módulo; usa `src/shared/` para los contratos comunes.
 
@@ -93,12 +94,12 @@ No añadas React Query, SWR ni librerías equivalentes.
 | Ruta | Módulo | Pendiente principal |
 | --- | --- | --- |
 | `/login`, `/register`, `/dashboard` | A | Implementado; pendiente prueba con la cuenta oficial del equipo |
-| `/wanted`, `/wanted/:id` | B | Filtros en URL, paginación real y regreso al listado |
-| `/news`, `/news/:id` | B | Cursor, infinite scroll, deduplicación y preservar feed |
+| `/wanted`, `/wanted/:id` | B | Implementado; pendiente incorporación del ZIP y prueba con cuenta oficial |
+| `/news`, `/news/:id` | B | Implementado; pendiente incorporación, prueba con cuenta oficial y desbloqueo CP3 |
 | `/sagas`, `/sagas/:id` | C | Historia desde API, etapa en URL, mapa, accesibilidad |
 
 `/` redirige a `/dashboard`. Hay una página 404 y un fallback para errores de renderizado.
-Solo las páginas de B/C siguen siendo temporales. A consulta la API real configurada;
+Solo las páginas de C siguen siendo temporales. A y B consultan la API real configurada;
 no hay fixtures ni un backend de prueba en el código entregable.
 No se ha registrado una tripulación ni probado acceso autenticado con la cuenta oficial.
 
@@ -115,7 +116,8 @@ No se ha registrado una tripulación ni probado acceso autenticado con la cuenta
 
 Antes de la entrega final completar `hackathon.json` con TEAM_CODE y los integrantes reales,
 y añadir sus nombres/códigos al README. No se generaron identidades ficticias ni credenciales.
-El encargo de A incluye publicar base y A en `origin/main`; no incluye despliegue.
+Base y A se publicaron en `origin/main`. B se entrega por ZIP y su responsable hace el commit/push.
+Ver `docs/INTEGRAR_B.md`. No preparar C sobre una copia anterior al push de B.
 
 ## Referencias técnicas
 

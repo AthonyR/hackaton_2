@@ -1,0 +1,65 @@
+Entrega: B v1
+Responsable funcional: integrante B (nombre y código pendientes de proporcionar).
+Commit de main usado como base: 4ed9006b02bb45466072cbf83be9e17a61820546
+Repositorio: https://github.com/AthonyR/hackaton_2.git
+Raíz de la aplicación: raíz del repositorio que contiene package.json y src/.
+Origen de esta copia: C:\Users\yairc\Desktop\hackaton2\hackaton-frontend-20262
+Destino: raíz del clon del integrante B, conservando su .git, .idea y .env.local.
+
+CONTENIDO
+Proyecto completo actualizado: base compartida + A existente + B nuevo.
+B: CP2 carteles y CP4 noticias. C/CP5 conserva sus rutas temporales.
+Los archivos están directamente en la raíz del ZIP, sin carpeta envolvente.
+
+ARCHIVOS AÑADIDOS
+docs/INTEGRAR_B.md
+docs/MODULO_B.md
+ENTREGA.txt
+src/modules/news/api.ts
+src/modules/news/current-news.ts
+src/modules/news/feed-context.ts
+src/modules/news/feed-controller.ts
+src/modules/news/NewsArticle.tsx
+src/modules/news/NewsDetailPage.tsx
+src/modules/news/NewsFeedPage.tsx
+src/modules/news/NewsModule.tsx
+src/modules/news/query.ts
+src/modules/news/useNewsDetail.ts
+src/modules/wanted/api.ts
+src/modules/wanted/format.ts
+src/modules/wanted/query.ts
+src/modules/wanted/SearchInput.tsx
+src/modules/wanted/useWantedResource.ts
+src/modules/wanted/WantedDetailPage.tsx
+src/modules/wanted/WantedModule.tsx
+
+ARCHIVOS MODIFICADOS
+ESTADO_EQUIPO.md
+README.md
+docs/MODULOS.md
+src/modules/news/routes.tsx
+src/modules/wanted/routes.tsx
+
+ARCHIVOS ELIMINADOS
+Ninguno.
+
+CONFIGURACIÓN Y DEPENDENCIAS
+Sin cambios en dependencias, package-lock.json ni configuración de A/C.
+Usar Node 24 LTS. Si no existe .env.local, copiar .env.example.
+La única configuración pública requerida es VITE_API_BASE_URL, ya indicada en .env.example.
+No hay tokens, contraseñas reales, backend ni datos de prueba dentro del ZIP.
+
+COMANDOS
+Antes de copiar: git status; git pull --ff-only origin main; git rev-parse HEAD.
+Confirmar que la base coincide con el commit de arriba y respaldar el clon fuera de su carpeta.
+Tras copiar el contenido a la raíz: npm ci; npm run lint; npm run build; npm run dev.
+Instrucciones de incorporación y commit/push: docs/INTEGRAR_B.md.
+
+ESTADO REAL
+B implementado localmente. Build y lint correctos, con pruebas de lógica y de navegador
+usando respuestas temporales de QA que no se incluyen en el proyecto.
+No se hicieron commits ni push de B. El integrante B debe revisar, incorporar y subir a main.
+Sin deploy. A permanece conservado y C pendiente.
+Pendiente validar con la cuenta oficial; noticias requiere aprobación del CP3.
+Integrantes, TEAM_CODE y hackathon.json se completan con los datos reales antes de entregar.
+Antes de preparar C, la copia principal debe actualizarse con el push real de B.
